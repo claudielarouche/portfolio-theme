@@ -1,0 +1,157 @@
+---
+// Required for Jekyll to process this as Sass
+---
+
+/*─────────────────────────────────────────────────────────────────────────────*/
+/* 1. Variables                                                              */
+/*─────────────────────────────────────────────────────────────────────────────*/
+$font-stack:     'Helvetica Neue', Arial, sans-serif;
+$primary-color:  #005fcc;
+$secondary-color:#f5f5f5;
+$success-color:  #28a745;
+$warning-color:  #ffc107;
+$danger-color:   #dc3545;
+$base-padding:   1rem;
+
+/*─────────────────────────────────────────────────────────────────────────────*/
+/* 2. Base Reset & Typography                                                */
+/*─────────────────────────────────────────────────────────────────────────────*/
+/* Box-sizing reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/*─────────────────────────────────────────────────────────────────────────────*/
+/* 3. Layout Helpers                                                         */
+/*─────────────────────────────────────────────────────────────────────────────*/
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $base-padding;
+}
+
+/* Utility */
+.text-center { text-align: center; }
+
+/*─────────────────────────────────────────────────────────────────────────────*/
+/* 4. Component Styles                                                       */
+/*─────────────────────────────────────────────────────────────────────────────*/
+
+/* Alerts */
+.alert {
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+}
+.alert-info {
+  background-color: $secondary-color;
+  border-left: 4px solid $primary-color;
+}
+.alert-success {
+  background-color: lighten($success-color, 35%);
+  border-left: 4px solid $success-color;
+}
+.alert-warning {
+  background-color: lighten($warning-color, 35%);
+  border-left: 4px solid $warning-color;
+}
+.alert-danger {
+  background-color: lighten($danger-color, 35%);
+  border-left: 4px solid $danger-color;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-primary {
+  background-color: $primary-color;
+  color: #fff;
+}
+.btn-secondary {
+  background-color: $secondary-color;
+  color: #333;
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+}
+
+/* Image Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Team Card */
+.team-card {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+.team-card img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
+}
+.team-card .info {
+  flex: 1;
+}
+
+/* Testimonials */
+.testimonial {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid $primary-color;
+  background-color: $secondary-color;
+}
+.testimonial p {
+  margin: 0 0 0.5rem;
+  font-style: italic;
+}
+.testimonial .author {
+  font-weight: bold;
+}
+
+/*─────────────────────────────────────────────────────────────────────────────*/
+/* 5. Responsive Tweaks                                                       */
+/*─────────────────────────────────────────────────────────────────────────────*/
+@media (max-width: 600px) {
+  .container {
+    padding: 0.5rem;
+  }
+}
