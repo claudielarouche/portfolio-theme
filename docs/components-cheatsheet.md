@@ -14,15 +14,7 @@
 
 ---
 
-## Alerts
 
-**File:** `_includes/alert.html`  
-**Purpose:** Display a colored call-out box.
-
-### Parameters
-
-- `type` (required): one of `info`, `success`, `warning`, `danger`  
-- `content` (required): the message text (Markdown allowed)
 
 ### Snippet
 
