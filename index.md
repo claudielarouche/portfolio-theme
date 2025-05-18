@@ -13,7 +13,4 @@ This is a live demonstration of the **Portfolio Theme**. Below you’ll see exam
 
 ## Alert Example
 
-```liquid
-{% include alert.html type="info" content="This is an info alert. Use alerts to call attention to important messages." %}
-
 {% include alert.html %}
