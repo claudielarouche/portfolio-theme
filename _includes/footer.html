@@ -1,0 +1,20 @@
+<footer class="site-footer">
+  <div class="container text-center">
+    <p>
+      &copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.
+    </p>
+
+    <!-- Optional social links: define `social:` array in _config.yml -->
+    {% if site.social %}
+      <ul class="social-links">
+        {% for acct in site.social %}
+          <li>
+            <a href="{{ acct.url }}" aria-label="{{ acct.name }}">
+              {{ acct.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</footer>

@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="container">
+    <!-- Site title / logo -->
+    <h1 class="site-title">
+      <a href="{{ "/" | relative_url }}">{{ site.title }}</a>
+    </h1>
+
+    <!-- Optional nav: define `nav:` array in _config.yml -->
+    {% if site.nav %}
+      {% include nav.html %}
+    {% endif %}
+  </div>
+</header>

@@ -1,0 +1,57 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Basic site meta (used when theme is built as its own site for demos)
+# ──────────────────────────────────────────────────────────────────────────────
+name: portfolio-theme
+title: Portfolio Theme
+description: >-
+  A Jekyll theme for creating clean, Markdown-driven portfolio sites
+url: ""             # set this if you ever demo on GitHub Pages (e.g. /portfolio-theme)
+baseurl: ""         # leave blank unless demoing under a subpath
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Markdown & Plugins
+# ──────────────────────────────────────────────────────────────────────────────
+markdown: kramdown
+highlighter: rouge
+
+# Enable remote_theme support when someone builds locally
+plugins:
+  - jekyll-remote-theme
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Defaults: auto-apply layouts
+# ──────────────────────────────────────────────────────────────────────────────
+defaults:
+  # Every page (e.g. *.md in root) uses layout: page
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+
+  # Every post (in _posts/) uses layout: post
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Theme settings: nav & social (clients inherit these unless they override)
+# ──────────────────────────────────────────────────────────────────────────────
+nav:
+  - label: "Home"
+    url: /
+  - label: "Components"
+    url: /components/
+
+social:
+  - icon: "github"
+    url: "https://github.com/your-username"
+  - icon: "twitter"
+    url: "https://twitter.com/your-handle"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# (Optional) Versioning & Gem settings if you ever wrap as a gem-based theme
+# ──────────────────────────────────────────────────────────────────────────────
+version: "1.0.0"
