@@ -6,7 +6,7 @@ title: Portfolio Theme
 description: >-
   A Jekyll theme for creating clean, Markdown-driven portfolio sites
 url: ""             # set this if you ever demo on GitHub Pages (e.g. /portfolio-theme)
-baseurl: ""         # leave blank unless demoing under a subpath
+baseurl: "/portfolio-theme"         # leave blank unless demoing under a subpath
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Markdown & Plugins
