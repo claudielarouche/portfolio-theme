@@ -36,6 +36,13 @@ defaults:
     values:
       layout: post
 
+  # Projects all use the `project` layout by default
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+
 # ──────────────────────────────────────────────────────────────────────────────
 # Theme settings: nav & social (clients inherit these unless they override)
 # ──────────────────────────────────────────────────────────────────────────────
@@ -58,3 +65,7 @@ plugins:
 # (Optional) Versioning & Gem settings if you ever wrap as a gem-based theme
 # ──────────────────────────────────────────────────────────────────────────────
 version: "1.0.0"
+
+collections:
+  projects:
+    output: true        # so each project gets its own page
