@@ -1,0 +1,11 @@
+{% if site.projects and site.projects.size > 0 %}
+
+## Projects
+
+<ul class="project-list">
+  {% for proj in site.projects %}
+    <li><a href="{{ proj.url | relative_url }}">{{ proj.title }}</a></li>
+  {% endfor %}
+</ul>
+
+{% endif %}
