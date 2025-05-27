@@ -1,0 +1,27 @@
+{% comment %}
+Include: projects_by_category.html
+Auto-generates a section for each unique tag (category) in site.projects.
+Usage: {% raw %}{% include projects_by_category.html %}{% endraw %}
+{% endcomment %}
+
+{% assign all_tags = site.projects | map: "tags" | flatten | uniq | sort %}
+
+{% for category in all_tags %}
+  <h2>{{ category }}</h2>
+  <div class="projects-gallery">
+    {% assign filtered = site.projects | where_exp: "project", "project.tags contains category" %}
+    {% if filtered.size > 0 %}
+      {% for project in filtered %}
+        <div class="project-card">
+          <a href="{{ project.url | relative_url }}">
+            <img src="{{ project.image }}" alt="{{ project.title }}" />
+            <h3>{{ project.title }}</h3>
+          </a>
+          <p>{{ project.description }}</p>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No projects in this category yet.</p>
+    {% endif %}
+  </div>
+{% endfor %}

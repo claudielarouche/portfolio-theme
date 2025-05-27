@@ -13,8 +13,4 @@ This is a live demonstration of the **Portfolio Theme**. Below you’ll see exam
 
 ## Projects
 
-<ul class="project-list">
-{% for proj in site.projects %}
-  <li><a href="{{ proj.url | relative_url }}">{{ proj.title }}</a></li>
-{% endfor %}
-</ul>
+{% include projects_by_category.html %}
