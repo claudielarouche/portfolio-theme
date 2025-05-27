@@ -1,5 +1,6 @@
 ---
 title: My Project Number 1
+image: 
 ---
 
 This is project 1. If you want to see a slightly different project, head over to [Project 2](https://claudielarouche.github.io/portfolio-test/projects/project-two.html)!
